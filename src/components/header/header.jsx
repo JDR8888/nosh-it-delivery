@@ -1,21 +1,19 @@
-
-
+import styles from './header.module.css';
+import {GrCart} from 'react-icons/Gr'; 
 const Header = () => {
 
     return (
-        <>
-            <nav>
+            <nav className={styles.header}>
                 <ul>
-                    <li><a href="#" className="secondary">…</a></li>
+
                 </ul>
                 <ul>
-                    <li><strong> Nosh-it </strong></li>
+                    <li><u> Nosh-it </u></li>
                 </ul>
-                <ul>
-                    <li><a href="#" class="secondary">Cart</a></li>
+                <ul className={styles.cartBtn}>
+                <a href="#" role="button"> <GrCart /> <sup>1</sup></a>
                 </ul>
             </nav>
-            </>
     )
 }
 

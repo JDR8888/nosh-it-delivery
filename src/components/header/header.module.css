@@ -1,0 +1,37 @@
+.header {
+    background-color: #A41E1E;
+    min-width: 100%;
+   display: flex;
+   justify-content: space-around;
+}
+
+.header u {
+    font-family: "Ultra";
+    font-size: 2.5rem;
+}
+
+.cartBtn {
+    margin-right: 5rem;
+}
+
+.header sup {
+    color: white;
+    background-color: #A74DED;
+    border-radius: 2rem;
+    padding: 0.25rem;
+    font-size: 1rem;
+}
+
+.header a {
+    border-radius: 2rem;
+    font-size: 2rem;
+    background-color: white;
+}
+
+.header GrCart {
+    size: 2rem;
+}
+
+.header a:hover {
+    background-color: antiquewhite;
+}
