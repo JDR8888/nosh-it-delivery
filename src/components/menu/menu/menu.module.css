@@ -1,0 +1,13 @@
+.menu  {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.menu header {
+    width: 100%;
+    font-family: "Ultra";
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.5rem;
+}

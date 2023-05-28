@@ -1,0 +1,33 @@
+.menuItem {
+    width: 100%;
+}
+
+.imgBox {
+    max-width: 25%;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.order kbd {
+    color: #A74DED;
+    /* font-size: 1.5rem; */
+    font-weight: bolder;
+}
+
+.order p {
+    text-align: center;
+}
+
+
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+}

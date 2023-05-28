@@ -1,5 +1,5 @@
 .header {
-    background-color: #A41E1E;
+    /* background-color: #A41E1E; */
     min-width: 100%;
    display: flex;
    justify-content: space-around;
@@ -8,6 +8,7 @@
 .header u {
     font-family: "Ultra";
     font-size: 2.5rem;
+    color: #a41e1e;
 }
 
 .cartBtn {
@@ -20,12 +21,14 @@
     border-radius: 2rem;
     padding: 0.25rem;
     font-size: 1rem;
+    
 }
 
 .header a {
     border-radius: 2rem;
     font-size: 2rem;
     background-color: white;
+    border: 1px solid #a41e1e;
 }
 
 .header GrCart {
@@ -35,3 +38,4 @@
 .header a:hover {
     background-color: antiquewhite;
 }
+
