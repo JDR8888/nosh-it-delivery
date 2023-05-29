@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import styles from './header.module.css';
-import {GrCart} from 'react-icons/Gr'; 
+// import {GrCart} from 'react-icons/Gr';
+import GrCart from "../../accessories/cart.gif"; 
 import CartContext from '../../context/cart-context';
 
 const Header = (props) => {
@@ -13,7 +14,7 @@ const Header = (props) => {
                     <li><u> Nosh-it </u></li>
                 </ul>
                 <ul className={styles.cartBtn}>
-                <a href="#" onClick={props.onOpen} role="button" data-tooltip="view cart" data-placement="bottom"> <GrCart /> <sup>{ctx.totalItems} </sup></a>
+                <a href="#" onClick={props.onOpen} role="button" data-tooltip="view cart" data-placement="bottom"> <img src={GrCart} alt="" /> <sup>{ctx.totalItems} </sup></a>
                 </ul>
             </nav>
     )
