@@ -13,22 +13,10 @@
 
 }
 
-.order kbd {
-    background-color: #A74DED;
-    /* font-size: 1.5rem; */
-    font-weight: bolder;
-    cursor: grab;
-    font-size: 12px;
-    padding: 6px 8px;
-    border: none;
-}
-
-.order p {
-    text-align: center;
-}
-
 .order {
-    min-width: 25%;
+    min-width: 30%;
+    display: flex;
+    justify-content: center;
 }
 
 .description {

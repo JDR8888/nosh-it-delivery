@@ -4,9 +4,11 @@ import egg from '../../../accessories/unsplash-egg.jpg';
 import tartare from '../../../accessories/tartare.jpg';
 import oysters from '../../../accessories/unsplash-oysters.jpg';
 import polenta from '../../../accessories/unsplash-polenta.jpg';
-import { useState } from "react";
+import { useState, useContext } from "react";
+import CartContext from "../../../context/cart-context";
 
 const Menu = () => {
+        // list of menu item objects
         const menuItemsList = [
             {
             id: 'i1',
@@ -44,40 +46,43 @@ const Menu = () => {
                 price: 33.36,
                 description: "High-end comfort food. Savory oxtail + bone marrow paired with a rich, smooth polenta. Serves 2, if you want it to."
             }
-        ]
-    
+        ];
+        // initialize context variable
+        const ctx = useContext(CartContext);
+        // update qty for items
         const [menuList, setMenuList] = useState(menuItemsList);
 
         const handleAddItem  = (itemId) => { 
             console.log(itemId)
             const updatedItems = menuList.map((item) => {
-            if(item.id === itemId){
-                return {
-                    ...item,
-                    qty: item.qty + 1,
-                };
-            }
-            return item;
-            });
-            setMenuList(updatedItems)
-        }
-
-        const handleRemoveItem  = (itemId) => { 
-            console.log(itemId)
-            const updatedItems = menuList.map((item) => {
-            if(item.id === itemId){
-                if(item.qty > 0){
+                if(item.id === itemId){
                     return {
                         ...item,
                         qty: item.qty + 1,
                     };
                 }
-                
-            }
             return item;
             });
             setMenuList(updatedItems)
-        }
+            ctx.addItem(updatedItems.filter((item) => item.id === itemId)[0])
+            console.log(ctx.items);
+            console.log(ctx.totalAmount);
+        };
+        const handleRemoveItem  = (itemId) => { 
+            console.log(itemId)
+            const updatedItems = menuList.map((item) => {
+                if(item.id === itemId){
+                    if(item.qty > 0){
+                        return {
+                            ...item,
+                            qty: item.qty - 1,
+                        };
+                    } 
+                }
+            return item;
+            });
+            setMenuList(updatedItems)
+        };
 
     return (
         <main className={`container ${styles.menu} `}>
@@ -94,10 +99,9 @@ const Menu = () => {
                 description={menuList.description}
                 qty={menuList.qty}
                 onAdd={handleAddItem}
+                onRemove={handleRemoveItem}
                 />
             ))}
-            
-           
         </main>
     )
 }

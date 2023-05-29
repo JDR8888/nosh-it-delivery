@@ -1,7 +1,7 @@
-import styles from './menu-item.module.css';
+import styles from './cart-item.module.css';
 
 
-const MenuItem = (props) => {
+const CartItem = (props) => {
 
     const addItem = (event) => {
         event.preventDefault();
@@ -31,18 +31,9 @@ const MenuItem = (props) => {
                     </div>
                     <div className={styles.order}>
                         <div >
-                            <kbd 
-                            role='button'
-                            id={props.id} 
-                            data-tooltip="remove from cart"
-                            onClick={removeItem}
-                            >-
-                            </kbd>
-                            <kbd>{props.qty}</kbd>
-                            <kbd
-                            id={props.id}
-                            role='button'
-                            data-tooltip="add to cart" onClick={addItem}>+</kbd>
+
+                            <p>Quantity: {props.qty}</p>
+                            
                         </div>
                     </div>
                     
@@ -52,4 +43,4 @@ const MenuItem = (props) => {
         </details>
     )
 }
-export default MenuItem;
+export default CartItem;
