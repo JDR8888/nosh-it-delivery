@@ -53,7 +53,7 @@ const Menu = () => {
         const [menuList, setMenuList] = useState(menuItemsList);
 
         const handleAddItem  = (itemId) => { 
-            console.log(itemId)
+            // console.log(itemId)
             const updatedItems = menuList.map((item) => {
                 if(item.id === itemId){
                     return {
@@ -65,8 +65,8 @@ const Menu = () => {
             });
             setMenuList(updatedItems)
             ctx.addItem(updatedItems.filter((item) => item.id === itemId)[0])
-            console.log(ctx.items);
-            console.log(ctx.totalAmount);
+            // console.log(ctx.items);
+            // console.log(ctx.totalAmount);
         };
         const handleRemoveItem  = (itemId) => { 
             console.log(itemId)
@@ -82,6 +82,7 @@ const Menu = () => {
             return item;
             });
             setMenuList(updatedItems)
+            ctx.removeItem
         };
 
     return (

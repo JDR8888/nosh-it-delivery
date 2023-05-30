@@ -6,7 +6,7 @@ const BlurbBox = () => {
             <img src={caviar} />
             <hgroup>
                 <h3> Want ludicrously extravagant food but still in your robe and loafers? </h3>
-                <h3> We got you covered! Check out the menu below and add as much to your cart as you like, you glutton. </h3>
+                <h3> We got you covered! Check out the menu below and add as much to your cart as you like. </h3>
             </hgroup>
         </div>
     )
