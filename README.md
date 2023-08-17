@@ -10,7 +10,8 @@ Get your nosh on with this poshy mock food ordering app built with React.js and 
 ## INSTRUCTIONS
 
 
-The deployed app is at: 
+The deployed app is at: https://jdr8888.github.io/nosh-it-delivery/
+
 The github repo is @ https://github.com/JDR8888/nosh-it-delivery 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d6d0a6dc-817e-46a6-9967-cc066a95b23d/deploy-status)](https://app.netlify.com/sites/nosh-it-food-delivery/deploys)
